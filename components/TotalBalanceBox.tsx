@@ -1,5 +1,7 @@
 import { formatAmount } from '@/lib/utils'
 import AnimatedCounter from './AnimatedCounter'
+import { Doughnut } from 'react-chartjs-2'
+import DoughnutChart from './DoughnutChart'
 
 const TotalBalanceBox = ({
   accounts = [],
@@ -9,7 +11,7 @@ const TotalBalanceBox = ({
   return (
     <section className="total-balance">
       <div className="total-balance-chart">
-        {/* Doughnut Chart */}
+        <DoughnutChart accounts={accounts} />
       </div>
       <div className="flex flex-col gap-6">
         <h2 className="header-2">
